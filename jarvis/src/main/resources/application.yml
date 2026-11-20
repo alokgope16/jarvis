@@ -1,0 +1,20 @@
+spring:
+  ai:
+    ollama:
+      base-url: http://localhost:11434
+      chat:
+        options:
+          model: llama3.2:3b
+          temperature: 0.5
+          num-ctx: 4096
+  datasource:
+    url: jdbc:h2:file:./data/jarvis
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+
+jarvis:
+  models: llama3.2:3b,llama3.2:1b,qwen2.5:3b
